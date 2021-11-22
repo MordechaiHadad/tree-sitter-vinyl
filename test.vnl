@@ -1,0 +1,7 @@
+int8 bruh_moment = 420;
+float64 hello = 6.9;
+int128 bruh;
+
+void test() {
+    
+}
