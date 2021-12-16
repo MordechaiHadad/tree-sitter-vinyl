@@ -52,7 +52,7 @@ module.exports = grammar({
 	primitive_type: $ => token(choice(
 		'bool',
 		'char',
-		// 'string',
+		'string',
 		'int8',
 		'int16',
 		'int32',
@@ -88,6 +88,7 @@ module.exports = grammar({
         $.array_creation_expression,
 		$.literal,
         $.binary_expression,
+        $.reference,
 	),
 
     binary_expression: $ => {
@@ -121,7 +122,9 @@ module.exports = grammar({
 		$.bool_literal,
         $.floating_point_literal,
 	),
-	
+
+	reference: $ => field('reference', token(seq(/[a-zA-Z_][a-zA-Z_0-9]*/))),
+
 	integer_literal: $ => token(seq(/[0-9][0-9_]*/)),
 
     floating_point_literal: $ => token(seq(/[0-9][0-9_]*\.[0-9]*/)),

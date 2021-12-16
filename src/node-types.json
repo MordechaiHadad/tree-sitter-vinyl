@@ -64,6 +64,10 @@
           {
             "type": "literal",
             "named": true
+          },
+          {
+            "type": "reference",
+            "named": true
           }
         ]
       },
@@ -160,6 +164,10 @@
           {
             "type": "literal",
             "named": true
+          },
+          {
+            "type": "reference",
+            "named": true
           }
         ]
       }
@@ -187,6 +195,10 @@
           },
           {
             "type": "literal",
+            "named": true
+          },
+          {
+            "type": "reference",
             "named": true
           },
           {
@@ -256,6 +268,11 @@
         ]
       }
     }
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "literal",
@@ -334,6 +351,11 @@
     }
   },
   {
+    "type": "reference",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -355,6 +377,10 @@
         },
         {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "reference",
           "named": true
         },
         {
@@ -387,6 +413,10 @@
           },
           {
             "type": "literal",
+            "named": true
+          },
+          {
+            "type": "reference",
             "named": true
           }
         ]
@@ -523,10 +553,6 @@
   },
   {
     "type": "floating_point_literal",
-    "named": true
-  },
-  {
-    "type": "identifier",
     "named": true
   },
   {

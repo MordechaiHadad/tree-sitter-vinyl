@@ -149,6 +149,10 @@
           },
           {
             "type": "STRING",
+            "value": "string"
+          },
+          {
+            "type": "STRING",
             "value": "int8"
           },
           {
@@ -269,6 +273,10 @@
         {
           "type": "SYMBOL",
           "name": "binary_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "reference"
         }
       ]
     },
@@ -671,6 +679,22 @@
           "name": "floating_point_literal"
         }
       ]
+    },
+    "reference": {
+      "type": "FIELD",
+      "name": "reference",
+      "content": {
+        "type": "TOKEN",
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[a-zA-Z_][a-zA-Z_0-9]*"
+            }
+          ]
+        }
+      }
     },
     "integer_literal": {
       "type": "TOKEN",
