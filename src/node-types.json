@@ -291,11 +291,11 @@
           "named": true
         },
         {
-          "type": "floating_point_literal",
+          "type": "integer_literal",
           "named": true
         },
         {
-          "type": "integer_literal",
+          "type": "real_literal",
           "named": true
         },
         {
@@ -558,12 +558,12 @@
     "named": false
   },
   {
-    "type": "false",
-    "named": false
+    "type": "comment",
+    "named": true
   },
   {
-    "type": "floating_point_literal",
-    "named": true
+    "type": "false",
+    "named": false
   },
   {
     "type": "integer_literal",
@@ -579,6 +579,10 @@
   },
   {
     "type": "primitive_type",
+    "named": true
+  },
+  {
+    "type": "real_literal",
     "named": true
   },
   {

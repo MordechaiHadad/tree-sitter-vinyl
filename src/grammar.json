@@ -137,6 +137,27 @@
       "type": "STRING",
       "value": "mutable"
     },
+    "comment": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "//"
+              },
+              {
+                "type": "PATTERN",
+                "value": "(\\\\(.|\\r?\\n)|[^\\\\\\n])*"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "_type": {
       "type": "CHOICE",
       "members": [
@@ -692,7 +713,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "floating_point_literal"
+          "name": "real_literal"
         }
       ]
     },
@@ -724,7 +745,7 @@
         ]
       }
     },
-    "floating_point_literal": {
+    "real_literal": {
       "type": "TOKEN",
       "content": {
         "type": "SEQ",
@@ -891,8 +912,12 @@
   },
   "extras": [
     {
+      "type": "SYMBOL",
+      "name": "comment"
+    },
+    {
       "type": "PATTERN",
-      "value": "\\s"
+      "value": "[\\s\\u00A0\\uFEFF\\u3000]+"
     }
   ],
   "conflicts": [],

@@ -13,6 +13,8 @@ const PREC = {
 module.exports = grammar({
   name: 'vinyl',
 
+  extras: $ => [$.comment, /[\s\u00A0\uFEFF\u3000]+/],
+
   rules: {
     source_file: $ => repeat($._statement),
 	
@@ -43,6 +45,10 @@ module.exports = grammar({
     ),
 
     mutability_specifier: $ => 'mutable',
+
+    comment: $ => token(choice(
+        seq('//', /(\\(.|\r?\n)|[^\\\n])*/),
+    )),
 
 	// Types
 	
@@ -123,14 +129,14 @@ module.exports = grammar({
 		$.string_literal,
 		$.char_literal,
 		$.bool_literal,
-        $.floating_point_literal,
+        $.real_literal,
 	),
 
 	reference: $ => field('reference', token(seq(/[a-zA-Z_][a-zA-Z_0-9]*/))),
 
 	integer_literal: $ => token(seq(/[0-9][0-9_]*/)),
 
-    floating_point_literal: $ => token(seq(/[0-9][0-9_]*\.[0-9]*/)),
+    real_literal: $ => token(seq(/[0-9][0-9_]*\.[0-9]*/)),
 
 	string_literal: $ => seq(
 		'"',
