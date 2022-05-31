@@ -27,6 +27,7 @@ module.exports = grammar({
 
 	variable_declaration: $ => seq(
 		field('type', $._type),
+        optional($.mutability_specifier),
 		field('name', $.identifier),
 		optional(seq(
 			'=',
@@ -40,6 +41,8 @@ module.exports = grammar({
         field('parameters', $.parameters),
         field('body', $.block),
     ),
+
+    mutability_specifier: $ => 'mutable',
 
 	// Types
 	

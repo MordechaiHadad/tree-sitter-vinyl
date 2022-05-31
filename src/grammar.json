@@ -46,6 +46,18 @@
           }
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "mutability_specifier"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "FIELD",
           "name": "name",
           "content": {
@@ -120,6 +132,10 @@
           }
         }
       ]
+    },
+    "mutability_specifier": {
+      "type": "STRING",
+      "value": "mutable"
     },
     "_type": {
       "type": "CHOICE",

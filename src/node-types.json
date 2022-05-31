@@ -445,6 +445,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "mutability_specifier",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -557,6 +567,10 @@
   },
   {
     "type": "integer_literal",
+    "named": true
+  },
+  {
+    "type": "mutability_specifier",
     "named": true
   },
   {
