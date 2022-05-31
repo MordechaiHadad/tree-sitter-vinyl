@@ -39,7 +39,7 @@ module.exports = grammar({
 
     function_declaration: $ => seq(
         field('return_type', $._type),
-        field('identifier', $.identifier),
+        field('name', $.identifier),
         field('parameters', $.parameters),
         field('body', $.block),
     ),

@@ -109,7 +109,7 @@
         },
         {
           "type": "FIELD",
-          "name": "identifier",
+          "name": "name",
           "content": {
             "type": "SYMBOL",
             "name": "identifier"

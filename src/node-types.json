@@ -233,7 +233,7 @@
           }
         ]
       },
-      "identifier": {
+      "name": {
         "multiple": false,
         "required": true,
         "types": [
