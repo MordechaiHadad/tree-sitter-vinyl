@@ -28,8 +28,8 @@ module.exports = grammar({
 	),
 
 	variable_declaration: $ => seq(
-		field('type', $._type),
         optional($.mutability_specifier),
+		field('type', $._type),
 		field('name', $.identifier),
 		optional(seq(
 			'=',

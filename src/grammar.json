@@ -38,14 +38,6 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "FIELD",
-          "name": "type",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_type"
-          }
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
@@ -56,6 +48,14 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_type"
+          }
         },
         {
           "type": "FIELD",
